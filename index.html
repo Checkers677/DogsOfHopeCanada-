@@ -1,84 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogs of Hope Canada</title>
+  <style>
+    /* ====== Reset ====== */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica', sans-serif; }
+    body { background:#fff; color:#333; line-height:1.4; }
+    a { text-decoration:none; color: inherit; }
 
-    <div>
-      <h1>Hope for every paw 🐾</h1>
-      <p>We rescue, heal, and rehome dogs across Canada. Help us give every dog a loving home.</p>
-      <a href="#donation">Donate Now</a>
-    </div>
-  </div>
+    /* ====== Container ====== */
+    .container { padding:1rem; max-width:480px; margin:0 auto; }
+
+    /* ====== Header ====== */
+    header { background:#ff6b6b; padding:1rem 0; text-align:center; color:#fff; position:sticky; top:0; z-index:100; }
+    header h1 { font-size:1.5rem; }
+    header h5 { font-size:0.9rem; font-weight:400; margin-top:0.3rem; }
+
+    /* ====== Navigation ====== */
+    nav { display:flex; justify-content:center; margin-top:0.5rem; }
+    nav a { padding:0.5rem 0.8rem; background:#fff; color:#ff6b6b; border-radius:20px; margin:0 0.2rem; font-size:0.9rem; font-weight:600; }
+
+    /* ====== Banner ====== */
+    #banner { background:#ffecec; padding:2rem 1rem; text-align:center; border-radius:10px; margin:1rem 0; }
+    #banner h2 { font-size:1.3rem; margin-bottom:0.5rem; }
+    #banner p { font-size:0.95rem; margin-bottom:1rem; }
+    #banner a { display:inline-block; background:#ff6b6b; color:#fff; padding:0.6rem 1rem; border-radius:25px; font-weight:600; }
+
+    /* ====== Sections ====== */
+    section { margin-bottom:1.5rem; }
+    section h2 { font-size:1.2rem; margin-bottom:0.8rem; text-align:center; color:#ff6b6b; }
+
+    /* ====== About ====== */
+    #about p { font-size:0.9rem; text-align:center; margin-bottom:0.5rem; }
+
+    /* ====== Dogs slider ====== */
+    .dog-slider { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:0.5rem; }
+    .dog-card { min-width:140px; scroll-snap-align:start; background:#ffecec; border-radius:10px; padding:0.5rem; text-align:center; }
+    .dog-card img { width:100%; border-radius:10px; }
+    .dog-card p { margin:0.3rem 0; font-weight:600; }
+    .dog-card a { display:block; font-size:0.8rem; color:#ff6b6b; margin-top:0.3rem; }
+
+    /* ====== Donation ====== */
+    #donation p, #donation a { display:block; text-align:center; margin:0.5rem 0; }
+    #donation a { background:#ff6b6b; color:#fff; padding:0.5rem 1rem; border-radius:25px; }
+
+    /* ====== Contact ====== */
+    #contact ul { list-style:none; text-align:center; }
+    #contact li { margin:0.5rem 0; font-size:0.9rem; }
+
+    /* ====== Footer ====== */
+    footer { text-align:center; font-size:0.75rem; color:#777; margin:1rem 0; }
+
+    /* ====== Mobile Only ====== */
+    @media (min-width:481px){ body { display:none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dogs of Hope Canada</h1>
+  <h5>Hope for every paw 🐾</h5>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#dogs">Dogs</a>
+    <a href="#donation">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div id="banner" class="container">
+  <h2>Give every dog a loving home</h2>
+  <p>We rescue, heal, and rehome dogs across Canada. Your help makes a difference!</p>
+  <a href="#donation">Donate Now</a>
 </div>
 
-<section id="about" class="py-100">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="image_container col-lg-5">
-        <figure>
-          <img src="images/Pets.png" alt="Rescued dogs" />
-        </figure>
-      </div>
-      <div class="about_text col-lg-5">
-        <h2>About Dogs of Hope Canada</h2>
-        <p>We are dedicated to rescuing abandoned and injured dogs, providing medical care, and finding them loving homes across Canada.</p>
-        <p>Our mission is to ensure every dog gets the care and love they deserve.</p>
-      </div>
+<section id="about" class="container">
+  <h2>About Us</h2>
+  <p>Dogs of Hope Canada is dedicated to rescuing abandoned and injured dogs, providing medical care, and finding loving homes.</p>
+  <p>Our mission: Ensure every dog gets the care and love they deserve.</p>
+</section>
+
+<section id="dogs" class="container">
+  <h2>Meet Our Dogs</h2>
+  <div class="dog-slider">
+    <div class="dog-card">
+      <img src="images/Katrine.png" alt="Katrine">
+      <p>Katrine</p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="dog-card">
+      <img src="images/Jennifer.png" alt="Jennifer">
+      <p>Jennifer</p>
+      <a href="#">Learn More</a>
+    </div>
+    <div class="dog-card">
+      <img src="images/Woody.png" alt="Woody">
+      <p>Woody</p>
+      <a href="#">Learn More</a>
     </div>
   </div>
 </section>
-
-<section id="pets" class="py-50">
-  <div class="container">
-    <h2>Meet Our Dogs Looking for Homes</h2>
-    <div class="slider_wrapper">
-      <div class="pets_slider">
-        <div class="slide" id="Katrine">
-          <figure><img src="images/Katrine.png" width="270"/></figure>
-          <p>Katrine</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div class="slide" id="Jennifer">
-          <figure><img src="images/Jennifer.png" width="270"/></figure>
-          <p>Jennifer</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div class="slide" id="Woody">
-          <figure><img src="images/Woody.png" width="270"/></figure>
-          <p>Woody</p>
-          <a href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    <section id="donation" class="container">
+  <h2>Support Our Rescue</h2>
+  <p>Help cover food, vet bills, and shelter costs for our dogs.</p>
+  <p>WhatsApp: <a href="https://wa.me/18254791282">+1 825 479 1282</a></p>
+  <a href="#">Donate via PayPal</a>
 </section>
 
-<section id="donation" class="py-50">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="image_container col-lg-5">
-        <figure><img src="images/Dog_donate.png" alt="Donate to help dogs"></figure>
-      </div>
-      <div class="donation_text col-lg-5">
-        <h2>Support Our Rescue</h2>
-        <p>You can help cover food, vet bills, and shelter costs.</p>
-        <p>WhatsApp: <a href="https://wa.me/18254791282">+1 825 479 1282</a></p>
-        <p>PayPal (fake for now): <a href="#">Donate Now</a></p>
-      </div>
-    </div>
-  </div>
+<section id="contact" class="container">
+  <h2>Contact Us</h2>
+  <ul>
+    <li>Email: <a href="mailto:doghealingca@gmail.com">doghealingca@gmail.com</a></li>
+    <li>WhatsApp: <a href="https://wa.me/18254791282">+1 825 479 1282</a></li>
+  </ul>
 </section>
 
-<section id="contact" class="py-50">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <ul>
-      <li>Email: <a href="mailto:doghealingca@gmail.com">doghealingca@gmail.com</a></li>
-      <li>WhatsApp: <a href="https://wa.me/18254791282">+1 825 479 1282</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer id="footer" class="py-50">
-  <div class="container">
-    <p>© 2025 Dogs of Hope Canada. All rights reserved.</p>
-  </div>
+<footer>
+  <p>© 2025 Dogs of Hope Canada. All rights reserved.</p>
 </footer>
 
 </body>
